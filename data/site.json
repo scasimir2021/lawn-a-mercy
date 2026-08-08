@@ -1,0 +1,51 @@
+{
+  "brand": {
+    "name": "Lawn-A-Mercy Landscaping",
+    "tagline": "Clean cuts. Yard tidy. Island pride.",
+    "headline": "Clean cuts. Yard tidy. Island pride.",
+    "subheadline": "Big project idea? We got you.",
+    "description": "From routine lawn care to full property transformations, we bring the tools, the team, and the care to make it happen."
+  },
+  "contact": {
+    "phone": "678-238-4010",
+    "email": "scbane93@gmail.com",
+    "owner": "Steven Casimir",
+    "city": "Lawrenceville, GA",
+    "service_area": "Lawrenceville and surrounding areas"
+  },
+  "social": {
+    "tiktok": "https://www.tiktok.com/@lawnamercylandscaping",
+    "instagram": "https://www.instagram.com/stevie_g.guru/",
+    "linkedin": "https://www.linkedin.com/in/steviegguru/"
+  },
+  "services": [
+    "Lawn Mowing",
+    "Edging",
+    "String Trimming",
+    "Weed Eating",
+    "Hedge Trimming",
+    "Yard Cleanup",
+    "Leaf Removal",
+    "Mulch Installation",
+    "Pressure Washing",
+    "Property Touch-Ups"
+  ],
+  "routes": {
+    "socials": "./#connect",
+    "quote": "tel:+16782384010",
+    "call": "tel:+16782384010"
+  },
+  "runtime": {
+    "remote_config_url": "",
+    "poll_seconds": 5,
+    "show_live_badge": true
+  },
+  "theme": {
+    "green": "#1d7c29",
+    "green_dark": "#07170b",
+    "gold": "#f6b817",
+    "red": "#c9282d",
+    "cream": "#fffaf0"
+  },
+  "base_url": "https://scasimir2021.github.io/lawn-a-mercy"
+}
