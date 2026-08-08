@@ -1,30 +1,45 @@
-# Lawn-A-Mercy Landscaping — GitHub Pages + Trio
+# Lawn-A-Mercy Landscaping — public website
 
-Plain HTML + CSS + vanilla JS. No build step.
+Professional public site for Lawn-A-Mercy Landscaping in Lawrenceville,
+Georgia. Plain HTML, CSS, and vanilla JavaScript; no compile step.
+
+- Live: <https://scasimir2021.github.io/lawn-a-mercy/>
+- Repository: <https://github.com/scasimir2021/lawn-a-mercy>
+- Content: `data/site.json`
+- Trio contract: `trio/CONTRACT.md`
 
 ## Preview
-`python -m http.server 8080` then open http://localhost:8080
 
-## Before printing QR codes
-Set the permanent GitHub Pages URL and regenerate SVG QR files:
-```bash
-pip install -r tools/requirements.txt
-python tools/trio_update.py --base-url https://YOUR_GITHUB_USERNAME.github.io/lawn-a-mercy
+```powershell
+python -m http.server 8080
 ```
 
-## Publish
-Create a public `lawn-a-mercy` repo, push this folder, then GitHub Settings → Pages → Source: GitHub Actions. Workflow included.
+Open <http://localhost:8080>.
 
-## Trio updates
-Everything important is in `data/site.json`. Example:
-```bash
-python tools/trio_update.py --phone 678-238-4010 --publish
+## Validate
+
+```powershell
+python -m pip install -r tools/requirements.txt
+python tools/trio_publish.py validate
+node --check assets/js/site.js
+git diff --check
 ```
-For near-real-time changes, point `runtime.remote_config_url` at a public CORS-enabled Trio JSON endpoint. The browser polls it every 5 seconds.
 
-## SVG swap points
-- `assets/brand/logo.svg` — replace freely
-- `assets/qr/*.svg` — vector QR files
-- future service icons can also be individual SVGs
+## Content update
 
-`assets/hero/crew-art.png` is the current raster crew art. It is intentionally isolated so we can later replace it with layered Steven/Nick/gear SVG or transparent PNG assets without touching the page layout.
+Use `tools/trio_update.py` for common JSON-backed changes:
+
+```powershell
+python tools/trio_update.py --instagram https://www.instagram.com/example/ --instagram-handle @example
+python tools/trio_update.py --add-service --service "Seasonal cleanup"
+```
+
+Trio dashboard users choose **Quick Steer → Improve → Lawn public site**. The
+worker edits and validates locally without committing. **Apps → Publish** is the separate public
+confirmation that validates and pushes `main`.
+
+## Work catalog
+
+Project placeholders remain visible until real work is approved. Follow
+`assets/work/README.md`. Never copy internal customer records or photos into
+this public repository automatically.

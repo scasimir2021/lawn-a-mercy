@@ -1,2 +1,3 @@
-.preview.*.log
-
+.preview.*
+__pycache__/
+*.py[cod]

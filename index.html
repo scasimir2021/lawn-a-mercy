@@ -1,7 +1,201 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Lawn-A-Mercy Landscaping — Lawrenceville, Georgia lawn care and property services."><title>Lawn-A-Mercy Landscaping</title><link rel="stylesheet" href="assets/css/site.css"></head>
-<body><header class="topbar"><a class="brand" href="#home"><img src="assets/brand/logo.svg" alt="Lawn-A-Mercy Landscaping"></a><nav><a href="#services">Services</a><a href="#connect">Connect</a><a href="#contact">Contact</a></nav><a class="button button-gold" data-bind-href="call" href="tel:+16782384010">Call / Text</a></header>
-<main id="home"><section class="hero shell"><div class="hero-art-wrap"><img class="hero-art" src="assets/hero/crew-art.png" alt="Lawn-A-Mercy landscaping crew illustration"></div><div class="hero-copy"><div class="live-chip" id="liveChip">TRIO READY</div><h1 data-bind="brand.headline">Clean cuts. Yard tidy. Island pride.</h1><h2><span data-bind="brand.subheadline">Big project idea? We got you.</span></h2><p data-bind="brand.description"></p><div class="cta-row"><a class="button button-gold" data-bind-href="call" href="tel:+16782384010">Call or text <strong data-bind="contact.phone">678-238-4010</strong></a><a class="button button-ghost" href="#services">See services</a></div><div class="trust-row"><span>✓ Reliable service</span><span>✓ Quality work</span><span>✓ Island values</span><span>✓ Local crew</span></div></div></section>
-<section class="services shell" id="services"><div class="section-title"><span>Our Services</span><small>JSON-driven: Trio can update without editing HTML.</small></div><div class="service-grid" id="serviceGrid"></div></section>
-<section class="contact-band" id="contact"><div class="shell contact-grid"><div><span class="eyebrow">Call or text today</span><a class="phone" data-bind-href="call" data-bind="contact.phone" href="tel:+16782384010">678-238-4010</a><div class="location" data-bind="contact.service_area">Lawrenceville and surrounding areas</div></div><div id="connect"><span class="eyebrow">Connect with us</span><div class="socials" id="socialLinks"></div></div><div class="qr-card"><img src="assets/qr/socials.svg" alt="QR code for Lawn-A-Mercy social links"><span>Permanent social hub QR</span><small>Change social destinations later without reprinting the QR.</small></div></div></section></main>
-<footer><span data-bind="brand.name">Lawn-A-Mercy Landscaping</span> · <span data-bind="contact.city">Lawrenceville, GA</span> · <span data-bind="contact.owner">Steven Casimir</span></footer><script src="assets/js/site.js" defer></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Owner-led lawn care, cleanup, mulch, hedge trimming, pressure washing, and property services in Lawrenceville, Georgia.">
+  <meta name="theme-color" content="#0b2115">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lawn-A-Mercy Landscaping">
+  <meta property="og:description" content="Clean cuts. Yard tidy. Island pride. Serving Lawrenceville and surrounding areas.">
+  <meta property="og:image" content="https://scasimir2021.github.io/lawn-a-mercy/assets/hero/crew-art.png">
+  <meta property="og:url" content="https://scasimir2021.github.io/lawn-a-mercy/">
+  <link rel="canonical" href="https://scasimir2021.github.io/lawn-a-mercy/">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Lawn-A-Mercy Landscaping | Lawrenceville, GA</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="home">
+    <div class="header-inner shell">
+      <a class="brand" href="#home" aria-label="Lawn-A-Mercy Landscaping home">
+        <img src="assets/brand/logo.svg" alt="Lawn-A-Mercy Landscaping">
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span><span class="sr-only">Open menu</span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#work">Our work</a>
+        <a href="#about">About</a>
+        <a href="#connect">Connect</a>
+      </nav>
+      <a class="button button-gold header-cta" data-bind-href="call" href="tel:+16782384010">
+        Call Steven
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-inner shell">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-mark"></span><span data-bind="brand.eyebrow">Owner-led landscaping in Lawrenceville, Georgia</span></p>
+          <h1 data-bind="brand.headline">Clean cuts. Yard tidy. Island pride.</h1>
+          <p class="hero-lede" data-bind="brand.description">From routine lawn care to full property transformations, we bring the tools, the team, and the care to make it happen.</p>
+          <div class="cta-row">
+            <a class="button button-gold button-large" data-bind-href="quote" href="sms:+16782384010">
+              Text for an estimate
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="text-link" href="#work">See our work <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+
+        <figure class="hero-portrait">
+          <div class="portrait-frame">
+            <img src="assets/hero/crew-art.png" alt="Steven Casimir, at left, with the Lawn-A-Mercy landscaping crew">
+            <span class="portrait-stamp">Island roots<br>Georgia grown</span>
+          </div>
+          <figcaption>
+            <span class="caption-kicker">Owner operated</span>
+            <span data-bind="brand.hero_caption">Steven Casimir, pictured at left, with the Lawn-A-Mercy crew.</span>
+          </figcaption>
+        </figure>
+        <dl class="hero-facts" aria-label="Business highlights">
+          <div><dt>Based in</dt><dd data-bind="contact.city">Lawrenceville, GA</dd></div>
+          <div><dt>Service</dt><dd>Owner-led property care</dd></div>
+          <div><dt>Contact</dt><dd data-bind="contact.phone">678-238-4010</dd></div>
+        </dl>
+      </div>
+      <div class="cut-line" aria-hidden="true"></div>
+    </section>
+
+    <section class="trust-strip" aria-label="Why choose Lawn-A-Mercy">
+      <div class="shell trust-grid">
+        <span>Clear communication</span>
+        <span>Respect for your property</span>
+        <span>Reliable local service</span>
+        <span>Pride in every pass</span>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="shell">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="eyebrow eyebrow-dark">Property care</p>
+            <h2>Everything your yard needs.<br><em>Done with intention.</em></h2>
+          </div>
+          <p class="section-intro">Routine maintenance, seasonal cleanup, and the finishing work that makes a property feel cared for.</p>
+        </div>
+        <div class="service-grid" id="serviceGrid" aria-live="polite"></div>
+        <div class="service-footnote">
+          <span>Have something else in mind?</span>
+          <a data-bind-href="call" href="tel:+16782384010">Tell us about the project →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="shell">
+        <div class="section-head section-head-split work-head">
+          <div>
+            <p class="eyebrow">Field notes</p>
+            <h2 data-bind="portfolio.title">Good work deserves a record.</h2>
+          </div>
+          <p class="section-intro" data-bind="portfolio.description">We are cataloging recent lawns, cleanups, and property transformations. Project photography is coming soon.</p>
+        </div>
+        <div class="work-grid" id="workGrid" aria-live="polite"></div>
+        <div class="catalog-note">
+          <span class="catalog-note-mark" aria-hidden="true">LAM</span>
+          <div>
+            <strong data-bind="portfolio.coming_soon_heading">Project catalog in progress</strong>
+            <p data-bind="portfolio.coming_soon_note">Photos and details are being organized now. Check back as each completed property is added.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="shell about-grid">
+        <div class="about-label">
+          <p class="eyebrow eyebrow-dark">About Lawn-A-Mercy</p>
+          <span class="owner-monogram" aria-hidden="true">SC</span>
+        </div>
+        <div class="about-copy">
+          <p class="about-statement">Every property should feel good to come home to.</p>
+          <p data-bind="brand.about">Lawn-A-Mercy is an owner-led Lawrenceville landscaping business built on careful work, direct communication, and island values. Steven stays close to every job—from the first conversation to the final cleanup.</p>
+          <a class="text-link text-link-dark" data-bind-href="call" href="tel:+16782384010">Talk with Steven <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section connect-section" id="connect">
+      <div class="shell">
+        <div class="section-head connect-head">
+          <p class="eyebrow">Stay connected</p>
+          <h2>Follow the work.<br><em>Call when you’re ready.</em></h2>
+        </div>
+        <div class="connect-layout">
+          <div class="social-grid" id="socialLinks" aria-label="Lawn-A-Mercy social profiles"></div>
+          <aside class="qr-panel">
+            <img src="assets/qr/socials.svg" alt="QR code opening current Lawn-A-Mercy social links">
+            <div>
+              <span class="caption-kicker">Scan once</span>
+              <strong>Keep every link handy.</strong>
+              <p>This permanent QR always opens our current social profiles.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="shell contact-inner">
+        <div>
+          <p class="eyebrow eyebrow-dark">Ready when you are</p>
+          <h2>Let’s take care of your property.</h2>
+          <p data-bind="contact.service_area">Lawrenceville and surrounding areas</p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-phone" data-bind-href="call" data-bind="contact.phone" href="tel:+16782384010">678-238-4010</a>
+          <div class="contact-buttons">
+            <a class="button button-dark" data-bind-href="quote" href="sms:+16782384010">Text for an estimate</a>
+            <a class="contact-email" data-bind-href="email" data-bind="contact.email" href="mailto:scbane93@gmail.com">scbane93@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <img src="assets/brand/logo.svg" alt="" aria-hidden="true">
+      <p><span data-bind="brand.name">Lawn-A-Mercy Landscaping</span> · <span data-bind="contact.city">Lawrenceville, GA</span></p>
+      <p>© <span id="currentYear"></span> <span data-bind="contact.owner">Steven Casimir</span></p>
+    </div>
+  </footer>
+
+  <a class="mobile-call" data-bind-href="call" href="tel:+16782384010">Call Steven <span data-bind="contact.phone">678-238-4010</span></a>
+
+  <script id="structuredData" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Lawn-A-Mercy Landscaping",
+    "url": "https://scasimir2021.github.io/lawn-a-mercy/",
+    "telephone": "+1-678-238-4010",
+    "email": "scbane93@gmail.com",
+    "address": {"@type": "PostalAddress", "addressLocality": "Lawrenceville", "addressRegion": "GA", "addressCountry": "US"},
+    "areaServed": "Lawrenceville and surrounding areas"
+  }
+  </script>
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

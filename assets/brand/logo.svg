@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-labelledby="title desc">
-<title id="title">Lawn-A-Mercy Landscaping</title><desc id="desc">Vector wordmark placeholder designed for easy replacement.</desc>
+<title id="title">Lawn-A-Mercy Landscaping</title><desc id="desc">Green and gold Lawn-A-Mercy Landscaping wordmark.</desc>
 <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#7ad51b"/><stop offset="1" stop-color="#1e7b21"/></linearGradient></defs>
 <g fill="none" stroke="#0b0b0b" stroke-width="12" stroke-linejoin="round" paint-order="stroke fill">
 <text x="24" y="112" font-family="Arial Black,Arial,sans-serif" font-size="98" font-style="italic" fill="url(#g)">Lawn-A-</text>
 <text x="90" y="184" font-family="Georgia,serif" font-size="102" font-style="italic" font-weight="700" fill="#f5b51b">Mercy</text></g>
-<text x="455" y="208" font-family="Arial,sans-serif" font-weight="800" font-size="30" fill="#111">LANDSCAPING</text>
+<text x="455" y="208" font-family="Arial,sans-serif" font-weight="800" font-size="30" fill="#fffefa" stroke="#07170b" stroke-width="4" paint-order="stroke fill">LANDSCAPING</text>
 <path d="M30 207H420" stroke="#f5b51b" stroke-width="10"/><path d="M30 207H230" stroke="#1c7c28" stroke-width="10"/></svg>
