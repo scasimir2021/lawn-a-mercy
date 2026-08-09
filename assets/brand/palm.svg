@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 128" fill="none" role="img" aria-label="Palm tree">
+  <path d="M50 118C47 89 50 63 56 39" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+  <path d="M56 39C39 28 26 26 12 29C25 35 36 42 49 49" fill="currentColor"/>
+  <path d="M57 39C42 20 31 14 18 11C29 23 39 32 51 47" fill="currentColor"/>
+  <path d="M57 39C57 18 62 8 72 2C69 18 67 31 60 47" fill="currentColor"/>
+  <path d="M58 40C74 20 84 16 94 17C84 29 74 39 62 49" fill="currentColor"/>
+  <path d="M58 41C75 36 86 38 94 44C80 46 70 49 60 54" fill="currentColor"/>
+  <circle cx="55" cy="40" r="5" fill="currentColor"/>
+</svg>
