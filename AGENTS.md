@@ -24,6 +24,8 @@ ship only after Steven explicitly approves it and its config item has both
   `assets/js/site.js`.
 - Permanent QR routing lives under `go/`; printed QR destinations must remain
   stable.
+- The complete-site QR uses `/go/?to=website`; `/qr/` is the public printable
+  page for website and social codes plus downloadable PNG copies.
 - Keep `runtime.remote_config_url` empty unless a reviewed public HTTPS+CORS
   config service exists. Never point it at the private manager or dashboard.
 

@@ -40,6 +40,12 @@ Printed QR codes route through `/go/`. `assets/qr/socials.svg` points to
 Social destinations can change without reprinting as long as the base URL and
 `/go/` route remain stable.
 
+`assets/qr/website.svg` points to `/go/?to=website`, which resolves through
+`routes.website` to the canonical homepage. The public `/qr/` page displays
+both official codes, their full destinations, and downloadable PNG copies.
+Keep the website route under the public GitHub Pages origin; never route a
+printed code into Trio's private apps.
+
 ## Public-image rule
 
 Never auto-export internal photos. Public images belong in `assets/work/` only

@@ -44,7 +44,8 @@
     "quote": "sms:+16782384010",
     "text": "sms:+16782384010",
     "call": "tel:+16782384010",
-    "email": "mailto:scbane93@gmail.com"
+    "email": "mailto:scbane93@gmail.com",
+    "website": "https://scasimir2021.github.io/lawn-a-mercy/"
   },
   "runtime": {
     "remote_config_url": "",
@@ -64,7 +65,7 @@
     "evergreen_deep": "#06110b",
     "stone": "#ddd8ca"
   },
-  "base_url": "https://scasimir2021.github.io/lawn-a-mercy/",
+  "base_url": "https://scasimir2021.github.io/lawn-a-mercy",
   "service_details": {
     "Lawn Mowing": "Consistent cuts with a clean, even finish.",
     "Edging": "Crisp borders along walks, drives, and beds.",

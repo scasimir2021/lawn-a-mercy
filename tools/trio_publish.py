@@ -34,20 +34,32 @@ ALLOWED_EXACT_PATHS = {
     "AGENTS.md",
     "README.md",
     "assets/brand/logo.svg",
+    "assets/brand/palm.svg",
     "assets/css/site.css",
+    "assets/css/qr.css",
     "assets/hero/crew-art.png",
+    "assets/hero/crew-approved-shell.svg",
+    "assets/hero/crew-approved-source.jpg",
+    "assets/hero/crew-approved.png",
+    "assets/hero/crew-approved.svg",
     "assets/js/site.js",
+    "assets/js/social-icons.js",
     "assets/qr/call.svg",
     "assets/qr/instagram.svg",
     "assets/qr/socials-copy.png",
+    "assets/qr/socials.png",
     "assets/qr/socials.svg",
+    "assets/qr/website.png",
+    "assets/qr/website.svg",
     "assets/work/README.md",
     "data/site.json",
     "go/index.html",
     "index.html",
+    "qr/index.html",
     "tools/requirements.txt",
     "tools/trio_publish.py",
     "tools/trio_update.py",
+    "tools/verify_package.py",
     "trio/CONTRACT.md",
 }
 DELETION_ONLY_PATHS = {"assets/hero/reference-mockup.png"}
@@ -189,7 +201,7 @@ def validate_local_assets() -> None:
         if not candidate.exists():
             raise PublishError(f"missing local asset from {source.relative_to(ROOT)}: {reference}")
 
-    for relative in ("index.html", "go/index.html", "404.html"):
+    for relative in ("index.html", "go/index.html", "qr/index.html", "404.html"):
         source = ROOT / relative
         parser = LocalAssetParser()
         parser.feed(source.read_text(encoding="utf-8"))
@@ -248,6 +260,12 @@ def validate_config() -> dict[str, Any]:
     validate_url(routes.get("call"), protocols=("tel",), label="routes.call")
     validate_url(routes.get("quote"), protocols=("sms",), label="routes.quote")
     validate_url(routes.get("socials"), protocols=("https",), label="routes.socials")
+    validate_url(routes.get("website"), protocols=("https",), label="routes.website")
+    base_url = str(config.get("base_url") or "").rstrip("/")
+    if routes.get("website") != f"{base_url}/":
+        raise PublishError("routes.website must point to the canonical homepage")
+    if routes.get("socials") != f"{base_url}/go/?to=socials":
+        raise PublishError("routes.socials must point to the permanent social hub")
     remote_config = str((config.get("runtime") or {}).get("remote_config_url") or "").strip()
     if remote_config:
         validate_url(remote_config, protocols=("https",), label="runtime.remote_config_url")
@@ -290,11 +308,14 @@ def validate_config() -> dict[str, Any]:
         raise PublishError(f"public index contains forbidden/internal claim: {found[0]}")
 
     run("node", "--check", "assets/js/site.js", timeout=60)
+    run("node", "--check", "assets/js/social-icons.js", timeout=60)
     run("git", "diff", "--check", timeout=60)
     for required in (
-        "index.html", "404.html", "go/index.html", "data/site.json",
-        "assets/brand/logo.svg", "assets/css/site.css", "assets/hero/crew-art.png",
-        "assets/js/site.js", "assets/qr/socials.svg", ".nojekyll",
+        "index.html", "404.html", "go/index.html", "qr/index.html", "data/site.json",
+        "assets/brand/logo.svg", "assets/brand/palm.svg", "assets/css/site.css", "assets/css/qr.css",
+        "assets/hero/crew-approved.svg", "assets/hero/crew-approved-source.jpg",
+        "assets/js/site.js", "assets/js/social-icons.js", "assets/qr/socials.svg", "assets/qr/socials.png",
+        "assets/qr/website.svg", "assets/qr/website.png", ".nojekyll",
     ):
         if not (ROOT / required).exists():
             raise PublishError(f"required public asset missing: {required}")

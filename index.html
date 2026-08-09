@@ -9,9 +9,11 @@
   <meta property="og:description" content="Clean cuts. Yard tidy. Island pride.">
   <meta property="og:image" content="https://scasimir2021.github.io/lawn-a-mercy/assets/hero/crew-approved-source.jpg">
   <meta property="og:url" content="https://scasimir2021.github.io/lawn-a-mercy/">
+  <link rel="canonical" href="https://scasimir2021.github.io/lawn-a-mercy/">
   <title>Lawn-A-Mercy Landscaping | Lawrenceville, GA</title>
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/qr.css">
 </head>
 <body>
   <header class="topbar">
@@ -52,12 +54,13 @@
 
     <section class="about-section" id="about"><div class="shell about-grid"><div class="about-mark"><img src="assets/brand/palm.svg" alt=""></div><div><p class="eyebrow dark">About Lawn-A-Mercy</p><h2>Direct communication. Clean work. Island pride.</h2><p data-bind="brand.about"></p><p><strong data-bind="contact.owner">Steven Casimir</strong> · <span data-bind="contact.city">Lawrenceville, GA</span></p></div></div></section>
 
-    <section class="connect-section" id="connect"><div class="shell connect-grid"><div class="connect-copy"><div class="island-kicker"><img src="assets/brand/palm.svg" alt=""><span>Stay connected</span></div><h2>Scan once. Keep the current links.</h2><p>The permanent QR always routes to the Lawn-A-Mercy social hub, so printed flyers can keep working even when individual social profiles change.</p><div class="social-links" id="socialLinks"></div></div><a class="qr-card" data-route="socials" href="https://scasimir2021.github.io/lawn-a-mercy/go/?to=socials"><img src="assets/qr/socials.svg" alt="QR code to Lawn-A-Mercy social hub"><strong>Scan for website + socials</strong><small>Permanent route: /go/?to=socials</small></a></div></section>
+    <section class="connect-section" id="connect"><div class="shell connect-grid"><div class="connect-copy"><div class="island-kicker"><img src="assets/brand/palm.svg" alt=""><span>Stay connected</span></div><h2>One full site. One quick social link.</h2><p>Use the website QR for every service, project update, social profile, and contact option. Use the social QR when you only need the current profiles. Both codes use permanent Lawn-A-Mercy routes.</p><div class="social-links" id="socialLinks"></div></div><div class="qr-area"><div class="qr-deck"><a class="qr-card qr-card-site" data-route="website" href="https://scasimir2021.github.io/lawn-a-mercy/"><img src="assets/qr/website.svg" alt="QR code to the complete Lawn-A-Mercy website"><strong>Full website</strong><small class="qr-full-link">scasimir2021.github.io/lawn-a-mercy/</small><small>Permanent route: /go/?to=website</small></a><a class="qr-card qr-card-social" data-route="socials" href="https://scasimir2021.github.io/lawn-a-mercy/go/?to=socials"><img src="assets/qr/socials.svg" alt="QR code to the current Lawn-A-Mercy social hub"><strong>Social quick link</strong><small>Permanent route: /go/?to=socials</small></a></div><a class="qr-page-link" href="qr/">Open printable QR cards →</a></div></div></section>
 
     <section class="final-contact"><div class="shell"><div><span class="eyebrow dark">Ready when you are</span><h2>Call or text. Same number. Two easy ways to reach us.</h2></div><div class="contact-duo compact"><a class="contact-tile contact-call" data-route="call" href="tel:+16782384010"><span class="tile-label">Call</span><strong data-bind="contact.phone">678-238-4010</strong></a><a class="contact-tile contact-text" data-route="text" href="sms:+16782384010"><span class="tile-label">Text</span><strong data-bind="contact.phone">678-238-4010</strong></a></div></div></section>
   </main>
 
-  <footer><div class="shell"><span data-bind="brand.name">Lawn-A-Mercy Landscaping</span><span data-bind="contact.service_area">Lawrenceville and surrounding areas</span><a data-route="email" href="mailto:scbane93@gmail.com" data-bind="contact.email">scbane93@gmail.com</a></div></footer>
+  <footer><div class="shell"><span data-bind="brand.name">Lawn-A-Mercy Landscaping</span><span data-bind="contact.service_area">Lawrenceville and surrounding areas</span><a href="qr/">Website + social QR cards</a><a data-route="email" href="mailto:scbane93@gmail.com" data-bind="contact.email">scbane93@gmail.com</a></div></footer>
   <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/social-icons.js" defer></script>
 </body>
 </html>

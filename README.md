@@ -4,6 +4,9 @@ Professional public site for Lawn-A-Mercy Landscaping in Lawrenceville,
 Georgia. Plain HTML, CSS, and vanilla JavaScript; no compile step.
 
 - Live: <https://scasimir2021.github.io/lawn-a-mercy/>
+- QR cards: <https://scasimir2021.github.io/lawn-a-mercy/qr/>
+- Permanent website route: <https://scasimir2021.github.io/lawn-a-mercy/go/?to=website>
+- Permanent social route: <https://scasimir2021.github.io/lawn-a-mercy/go/?to=socials>
 - Repository: <https://github.com/scasimir2021/lawn-a-mercy>
 - Content: `data/site.json`
 - Trio contract: `trio/CONTRACT.md`
