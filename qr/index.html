@@ -29,8 +29,8 @@
         <a href="../"><img class="qr" src="../assets/qr/website.svg" alt="QR code opening the complete Lawn-A-Mercy website"></a>
         <p class="destination">Full website:<br><a href="../">https://scasimir2021.github.io/lawn-a-mercy/</a></p>
         <div class="actions">
-          <a class="action action-primary" href="../assets/qr/website.png" download>Download PNG</a>
-          <button class="action copy-link" type="button" data-copy="https://scasimir2021.github.io/lawn-a-mercy/">Copy link</button>
+          <a class="action action-primary" href="../assets/qr/website.png" download aria-label="Download full website QR as PNG">Download PNG</a>
+          <button class="action copy-link" type="button" data-copy="https://scasimir2021.github.io/lawn-a-mercy/" aria-label="Copy full website link">Copy link</button>
         </div>
         <p class="route">QR route: https://scasimir2021.github.io/lawn-a-mercy/go/?to=website</p>
       </article>
@@ -41,8 +41,8 @@
         <a href="../go/?to=socials"><img class="qr" src="../assets/qr/socials.svg" alt="QR code opening the current Lawn-A-Mercy social hub"></a>
         <p class="destination">Full social link:<br><a href="../go/?to=socials">https://scasimir2021.github.io/lawn-a-mercy/go/?to=socials</a></p>
         <div class="actions">
-          <a class="action action-primary" href="../assets/qr/socials.png" download>Download PNG</a>
-          <button class="action copy-link" type="button" data-copy="https://scasimir2021.github.io/lawn-a-mercy/go/?to=socials">Copy link</button>
+          <a class="action action-primary" href="../assets/qr/socials.png" download aria-label="Download social hub QR as PNG">Download PNG</a>
+          <button class="action copy-link" type="button" data-copy="https://scasimir2021.github.io/lawn-a-mercy/go/?to=socials" aria-label="Copy social hub link">Copy link</button>
         </div>
         <p class="route">Individual profiles can change later without replacing this printed QR.</p>
       </article>
@@ -50,12 +50,13 @@
 
     <p class="note"><img src="../assets/brand/palm.svg" alt="">Print this page or download either PNG. The complete-site QR resolves through Lawn-A-Mercy’s stable route before opening the canonical homepage.</p>
   </main>
-  <div class="toast" id="toast" role="status" aria-live="polite">Link copied</div>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
   <script>
     const toast=document.getElementById('toast');
+    function announce(message){toast.classList.remove('show');toast.textContent='';requestAnimationFrame(()=>{toast.textContent=message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1600)})}
     document.querySelectorAll('.copy-link').forEach((button)=>button.addEventListener('click',async()=>{
       const value=button.dataset.copy;
-      try{await navigator.clipboard.writeText(value);toast.textContent='Link copied';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1600)}catch{window.prompt('Copy this link',value)}
+      try{await navigator.clipboard.writeText(value);announce('Link copied')}catch{window.prompt('Copy this link',value)}
     }));
   </script>
 </body>

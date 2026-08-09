@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import base64
 import hashlib
+import io
 import json
 import re
 import subprocess
@@ -39,8 +40,6 @@ ALLOWED_EXACT_PATHS = {
     "assets/css/qr.css",
     "assets/hero/crew-art.png",
     "assets/hero/crew-approved-shell.svg",
-    "assets/hero/crew-approved-source.jpg",
-    "assets/hero/crew-approved.png",
     "assets/hero/crew-approved.svg",
     "assets/js/site.js",
     "assets/js/social-icons.js",
@@ -208,12 +207,49 @@ def validate_local_assets() -> None:
         for reference in parser.references:
             check_reference(source, reference)
 
-    stylesheet = ROOT / "assets/css/site.css"
-    css = stylesheet.read_text(encoding="utf-8")
-    for reference in re.findall(r"url\(\s*['\"]?([^)'\"\s]+)", css, flags=re.IGNORECASE):
-        if reference.startswith("data:"):
-            continue
-        check_reference(stylesheet, reference)
+    for stylesheet in (ROOT / "assets/css/site.css", ROOT / "assets/css/qr.css"):
+        css = stylesheet.read_text(encoding="utf-8")
+        for reference in re.findall(r"url\(\s*['\"]?([^)'\"\s]+)", css, flags=re.IGNORECASE):
+            if reference.startswith("data:"):
+                continue
+            check_reference(stylesheet, reference)
+
+
+def expected_qr_bytes(destination: str) -> tuple[bytes, bytes]:
+    try:
+        import qrcode
+        from qrcode.image.svg import SvgPathImage
+    except ImportError as exc:
+        raise PublishError("qrcode is required to verify permanent QR assets") from exc
+
+    qr = qrcode.QRCode(
+        error_correction=qrcode.constants.ERROR_CORRECT_H,
+        box_size=14,
+        border=4,
+    )
+    qr.add_data(destination)
+    qr.make(fit=True)
+    png_stream = io.BytesIO()
+    qr.make_image(fill_color="black", back_color="white").save(png_stream, format="PNG")
+    svg_stream = io.BytesIO()
+    qr.make_image(image_factory=SvgPathImage).save(svg_stream)
+    return png_stream.getvalue(), svg_stream.getvalue()
+
+
+def validate_permanent_qr(config: dict[str, Any]) -> None:
+    base = str(config.get("base_url") or "").rstrip("/")
+    destinations = {
+        "website": f"{base}/go/?to=website",
+        "socials": f"{base}/go/?to=socials",
+    }
+    for name, destination in destinations.items():
+        expected_png, expected_svg = expected_qr_bytes(destination)
+        actual_png = (ROOT / "assets" / "qr" / f"{name}.png").read_bytes()
+        actual_svg = (ROOT / "assets" / "qr" / f"{name}.svg").read_bytes()
+        if actual_png != expected_png or actual_svg != expected_svg:
+            raise PublishError(f"{name} QR does not match its locked permanent route")
+        if name == "socials" and (ROOT / "assets/qr/socials-copy.png").read_bytes() != expected_png:
+            raise PublishError("socials-copy QR does not match the permanent social route")
 
 
 def validate_work_image_privacy(path: Path) -> None:
@@ -314,11 +350,13 @@ def validate_config() -> dict[str, Any]:
         "index.html", "404.html", "go/index.html", "qr/index.html", "data/site.json",
         "assets/brand/logo.svg", "assets/brand/palm.svg", "assets/css/site.css", "assets/css/qr.css",
         "assets/hero/crew-approved.svg", "assets/hero/crew-approved-source.jpg",
-        "assets/js/site.js", "assets/js/social-icons.js", "assets/qr/socials.svg", "assets/qr/socials.png",
+        "assets/js/site.js", "assets/js/social-icons.js", "assets/qr/socials.svg", "assets/qr/socials.png", "assets/qr/socials-copy.png",
         "assets/qr/website.svg", "assets/qr/website.png", ".nojekyll",
     ):
         if not (ROOT / required).exists():
             raise PublishError(f"required public asset missing: {required}")
+    validate_work_image_privacy(ROOT / "assets/hero/crew-approved-source.jpg")
+    validate_permanent_qr(config)
     validate_local_assets()
     return config
 
