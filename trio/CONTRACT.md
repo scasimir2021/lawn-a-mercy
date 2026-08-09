@@ -56,3 +56,34 @@ portfolio item requires:
 
 Rollback uses `git revert <commit>` in this standalone repo followed by the
 same confirmed publish flow. Never use force-push or destructive reset.
+
+## Permanent social hub
+
+`https://scasimir2021.github.io/lawn-a-mercy/go/?to=socials`
+
+Printed QR codes encode this URL and nothing else. `routes.socials` must keep
+pointing at it unless there is a deliberate, reprint-funded migration.
+
+## Safe mutable fields
+
+Trio may change these without review:
+
+- `brand.*` copy
+- `contact.phone`, `contact.email`, service area
+- `social.*` and `social_handles.*`
+- `services[]`
+- `theme.*` approved hex colors
+
+## Remote config limits
+
+A partial JSON override may be pulled from `runtime.remote_config_url`. The
+endpoint must be HTTPS and CORS-enabled, the poll interval must be at least 5
+seconds, and a failed fetch keeps the last known good config rather than
+blanking the page. Never put secrets or tokens into browser-fetched JSON.
+
+## Character asset
+
+`assets/hero/crew-approved.svg` is an SVG control shell around the approved
+advertisement artwork. The PNG inside preserves facial likeness better than
+automated vector tracing. Trio may scale or reposition this SVG but must not
+regenerate the people unless explicitly asked.

@@ -6,11 +6,12 @@
     "headline": "Clean cuts. Yard tidy. Island pride.",
     "subheadline": "Big project idea? We got you.",
     "description": "From routine lawn care to full property transformations, we bring the tools, the team, and the care to make it happen.",
-    "hero_caption": "Steven Casimir, pictured at left, with the Lawn-A-Mercy crew.",
-    "about": "Lawn-A-Mercy is an owner-led Lawrenceville landscaping business built on careful work, direct communication, and island values. Steven stays close to every job—from the first conversation to the final cleanup."
+    "about": "Lawn-A-Mercy is an owner-led Lawrenceville landscaping business built on careful work, direct communication, and island values.",
+    "hero_caption": "Steven Casimir, pictured at left, with the Lawn-A-Mercy crew."
   },
   "contact": {
     "phone": "678-238-4010",
+    "phone_e164": "+16782384010",
     "email": "scbane93@gmail.com",
     "owner": "Steven Casimir",
     "city": "Lawrenceville, GA",
@@ -24,7 +25,7 @@
   "social_handles": {
     "tiktok": "@lawnamercylandscaping",
     "instagram": "@stevie_g.guru",
-    "linkedin": "Steven Casimir"
+    "linkedin": "/in/steviegguru"
   },
   "services": [
     "Lawn Mowing",
@@ -38,6 +39,32 @@
     "Pressure Washing",
     "Property Touch-Ups"
   ],
+  "routes": {
+    "socials": "https://scasimir2021.github.io/lawn-a-mercy/go/?to=socials",
+    "quote": "sms:+16782384010",
+    "text": "sms:+16782384010",
+    "call": "tel:+16782384010",
+    "email": "mailto:scbane93@gmail.com"
+  },
+  "runtime": {
+    "remote_config_url": "",
+    "poll_seconds": 30,
+    "note": "Remote URL must be HTTPS and CORS-enabled when the public site is served by GitHub Pages."
+  },
+  "theme": {
+    "deep": "#06110b",
+    "green": "#0b361c",
+    "leaf": "#46a638",
+    "lime": "#7bdd42",
+    "gold": "#ffc300",
+    "paper": "#fffdf5",
+    "ink": "#0a160e",
+    "red": "#ce1126",
+    "evergreen": "#0b2115",
+    "evergreen_deep": "#06110b",
+    "stone": "#ddd8ca"
+  },
+  "base_url": "https://scasimir2021.github.io/lawn-a-mercy/",
   "service_details": {
     "Lawn Mowing": "Consistent cuts with a clean, even finish.",
     "Edging": "Crisp borders along walks, drives, and beds.",
@@ -73,26 +100,5 @@
       }
     ],
     "items": []
-  },
-  "routes": {
-    "socials": "https://scasimir2021.github.io/lawn-a-mercy/go/?to=socials",
-    "quote": "sms:+16782384010",
-    "text": "sms:+16782384010",
-    "call": "tel:+16782384010",
-    "email": "mailto:scbane93@gmail.com"
-  },
-  "runtime": {
-    "remote_config_url": "",
-    "poll_seconds": 30
-  },
-  "theme": {
-    "evergreen": "#0b2115",
-    "evergreen_deep": "#06110b",
-    "leaf": "#3f7d32",
-    "gold": "#e9ad19",
-    "stone": "#ddd8ca",
-    "paper": "#f5f2e9",
-    "red": "#b83a32"
-  },
-  "base_url": "https://scasimir2021.github.io/lawn-a-mercy"
+  }
 }
