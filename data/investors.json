@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Lawn-A-Mercy growth vision",
+    "headline": "Invest in the vision.",
+    "description": "Lawn-A-Mercy Landscaping is building from an owner-led Lawrenceville service business into a scalable, recognizable local property-care brand.",
+    "primary_cta": "Request investor information",
+    "secondary_cta": "Join the team"
+  },
+  "why_invest": [
+    {"title":"Branded fleet growth","body":"Expand capacity with distinctive trucks, trailers, tools, and field systems that make the brand recognizable on every route."},
+    {"title":"Repeat local demand","body":"Recurring lawn and property-care work creates an opportunity to build durable customer relationships across residential and small-business properties."},
+    {"title":"Scalable service mix","body":"Mowing, cleanup, mulch, trimming, pressure washing, and property touch-ups create multiple ways to serve the same customer."},
+    {"title":"Owner-led brand","body":"A community-rooted service identity built around direct communication, visible workmanship, and a memorable island-inspired brand."}
+  ],
+  "fleet": [
+    {"number":1,"title":"Truck + enclosed trailer","image":"../assets/investors/fleet-design-1.webp","description":"High-visibility truck and enclosed trailer concept with organized equipment storage and strong neighborhood branding."},
+    {"number":2,"title":"Enclosed service truck","image":"../assets/investors/fleet-design-2.webp","description":"A self-contained branded service body designed around clean organization, fast access, and professional presentation."},
+    {"number":3,"title":"Open-rack efficiency rig","image":"../assets/investors/fleet-design-3.webp","description":"Mobile rack system that keeps trimmers, blowers, tank, and daily-use tools visible and fast to reach."},
+    {"number":4,"title":"Van + compact trailer","image":"../assets/investors/fleet-design-4.webp","description":"Versatile urban/suburban setup for tight driveways, smaller properties, and a polished high-visibility presence."}
+  ],
+  "equipment_target": [
+    "1 riding mower",
+    "2 push mowers",
+    "3 weed eaters",
+    "2 blowers",
+    "1 50-gallon canister"
+  ],
+  "use_of_funds": [
+    {"title":"Equipment & fleet","body":"Acquire, repair, and upgrade trucks, trailers, mowers, tanks, and field tools."},
+    {"title":"Wraps & branding","body":"Build a consistent visual system across fleet, uniforms, print, signs, and customer touchpoints."},
+    {"title":"Customer acquisition","body":"Support local marketing, referral systems, neighborhood visibility, and digital lead capture."},
+    {"title":"Staffing & training","body":"Add dependable field capacity and codify repeatable service standards as routes grow."},
+    {"title":"Systems & operations","body":"Improve scheduling, estimating, customer records, inventory, reporting, and Trio-connected operations."}
+  ],
+  "team_roles": ["Investor partner","Crew lead","Operations","Sales / community partnerships"],
+  "disclaimer": "This page presents Lawn-A-Mercy Landscaping's operating vision and is not an offer to sell securities or a promise of returns. Any investment opportunity would require separate written terms and appropriate legal and financial review."
+}
