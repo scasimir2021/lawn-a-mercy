@@ -80,9 +80,9 @@
   },
   "portfolio": {
     "title": "Good work deserves a record.",
-    "description": "We are cataloging recent lawns, cleanups, and property transformations. Project photography is coming soon.",
-    "coming_soon_heading": "Project catalog in progress",
-    "coming_soon_note": "Photos and details are being organized now. Check back as each completed property is added.",
+    "description": "Real Lawn-A-Mercy jobs in the Lawrenceville area — the same property before we started and after we finished.",
+    "coming_soon_heading": "More projects on the way",
+    "coming_soon_note": "New before-and-after sets are added as each property is finished.",
     "categories": [
       {
         "label": "Routine care",
@@ -100,6 +100,63 @@
         "note": "Fresh beds and restored hard surfaces are coming soon."
       }
     ],
-    "items": []
+    "items": [
+      {
+        "id": "backyard-lawn-reset-before",
+        "pair": "backyard-lawn-reset",
+        "stage": "before",
+        "order": 1,
+        "title": "Backyard lawn reset",
+        "category": "Lawn care",
+        "location": "Lawrenceville area",
+        "description": "Overgrown back lawn with patchy, uneven growth before the cut.",
+        "image": "assets/work/backyard-lawn-reset-2026-08-before.webp",
+        "alt": "Overgrown backyard lawn with tall patchy grass before Lawn-A-Mercy mowed it",
+        "approved_for_public": true,
+        "published": true
+      },
+      {
+        "id": "backyard-lawn-reset-after",
+        "pair": "backyard-lawn-reset",
+        "stage": "after",
+        "order": 1,
+        "title": "Backyard lawn reset",
+        "category": "Lawn care",
+        "location": "Lawrenceville area",
+        "description": "Cut, edged, and finished with clean mower lines across the whole yard.",
+        "image": "assets/work/backyard-lawn-reset-2026-08-after.webp",
+        "alt": "The same backyard after mowing, showing even green grass with clean mower stripes",
+        "approved_for_public": true,
+        "published": true
+      },
+      {
+        "id": "tree-bed-cleanup-before",
+        "pair": "tree-bed-cleanup",
+        "stage": "before",
+        "order": 2,
+        "title": "Tree bed cleanup",
+        "category": "Yard cleanup",
+        "location": "Lawrenceville area",
+        "description": "Fallen limbs, sticks, and weeds scattered across the mulch ring.",
+        "image": "assets/work/tree-bed-cleanup-2026-08-before.webp",
+        "alt": "Mulch bed around a tree covered in fallen branches, sticks, and weeds",
+        "approved_for_public": true,
+        "published": true
+      },
+      {
+        "id": "tree-bed-cleanup-after",
+        "pair": "tree-bed-cleanup",
+        "stage": "after",
+        "order": 2,
+        "title": "Tree bed cleanup",
+        "category": "Yard cleanup",
+        "location": "Lawrenceville area",
+        "description": "Debris hauled out, weeds pulled, and the mulch raked back to a clean edge.",
+        "image": "assets/work/tree-bed-cleanup-2026-08-after.webp",
+        "alt": "The same tree bed cleared of debris with freshly raked mulch and a clean edge",
+        "approved_for_public": true,
+        "published": true
+      }
+    ]
   }
 }
