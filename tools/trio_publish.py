@@ -32,6 +32,9 @@ ALLOWED_EXACT_PATHS = {
     ".gitignore",
     ".nojekyll",
     "404.html",
+    # The full before/after catalogue. The front page shows the newest few and
+    # links here; this page carries the rest.
+    "work/index.html",
     "AGENTS.md",
     "README.md",
     "assets/brand/logo.svg",
